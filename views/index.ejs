@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <link rel="shortcut icon" type="image/ico" href="img/favicon.ico">
+        <link rel="stylesheet" type= text/css href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
+        <link rel="stylesheet" type= text/css href="css/index.css">
+        <title>IMPACT.com</title>
+    </head>
+    <!-- HEAD -->
+    <body>
+        <header>
+            <img src="img/logo.png" class="logo">
+            <nav>
+                <ul class="nav-area">
+                    <li><a href="/">Home</a></li>
+                    <li><a href="/NASA">NASA</a></li>
+                    <li><a href="pages/GPU.html">AstroWiki</a></li>
+                    <li><a href="pages/About.html">About</a></li>
+                </ul>
+            </nav>
+            <a href="#" class="btn-area">login</a>
+        </header>
+        <section>
+                <div class="row">
+                    <div class="column left">
+                        <h1>Welcome to IMPACT.com</h1>
+                        <text>where you can access live asteroids information</text>
+                        <br><br>
+                        <label>Inserisci lasso di tempo in cui cercare:</label><br>
+                        <form class="form" id="myform">
+                            <label>StartDate</label>
+                            <input type="date" name="StartDate"></input>
+                            <label>EndDate</label>
+                            <input type="date" name="EndDate"></input>
+                            <button class="btn-area">Search</button>
+                        </form>
+                    </div>
+                    <div id="loader"></div>
+                    <div class="column right">
+                        <textarea id ="risposta" readonly></textarea>
+                    </div>
+                </div>
+                <div class="row APOD">
+                    NASA Astronomy Picture of the day ===>
+                    <a class="btn-area" href="/APOD">
+                    GO
+                    </a> 
+                </div>
+        </section>
+        <script src="js/nasa_api_fetch.js"></script>
+        <footer>For info please contact us at : gianfelice.1851260@studenti.uniroma1.it  or  fosci.18XXXXX@studenti.uniroma1.it</footer>
+    </body>
+</html>

@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <link rel="shortcut icon" type="image/ico" href="img/favicon.ico">
+        <link rel="stylesheet" type= text/css href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
+        <link rel="stylesheet" type= text/css href="css/index.css">
+        <title>IMPACT.com</title>
+    </head>
+    <!-- HEAD -->
+    <body>
+        <header>
+            <img src="img/logo.png" class="logo">
+            <nav>
+                <ul class="nav-area">
+                    <li><a href="#">Home</a></li>
+                    <li><a href="pages/GPU.html">AstroWiki</li>
+                    <li><a href="pages/About.html">About</a></li>
+                </ul>
+            </nav>
+            <a href="#" class="btn-area">login</a>
+        </header>
+        <section>
+            <div class="row APOD" style="margin-bottom: 2%;">
+                <h1 style="color: red;">NASA PICTURE OF THE DAY: </h1>
+            </div>
+            <div class="row APOD" style="margin-top: 0; min-height:1000px;">
+                <div id="loader" style="display: block; position: absolute; left:46%; top:60%"></div>
+                <h2 id="APODT" style="color: red;"></h2><br>
+                <p id="descrizione"></p><br>
+                <img id="im"></img>
+            </div>
+        </section>
+        <script src="js/APOD_fetch.js"></script>
+        <footer>For info please contact us at : gianfelice.1851260@studenti.uniroma1.it  or  fosci.18XXXXX@studenti.uniroma1.it</footer>
+    </body>
+</html>
