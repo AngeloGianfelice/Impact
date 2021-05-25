@@ -1,0 +1,32 @@
+.row{
+  background-color:rgb(0, 0, 0);
+  border-radius: 30px;
+  border: whitesmoke solid;
+  margin-top: 5%;
+  margin-top: 5%;
+  text-align: center;
+  display: flex;
+  justify-content: center;
+}
+.column{
+  float: left;
+}
+.astroleft {
+
+  padding: 2%;
+  width: 50%;
+}
+.astroright {
+  text-align: center;
+  padding:2%;
+  width: 50%;
+  position:relative;
+  
+}
+
+.paragrafo{
+  font-size: medium;
+}
+#img1{
+  width:50%;
+}
