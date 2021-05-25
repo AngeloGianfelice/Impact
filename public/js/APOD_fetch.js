@@ -1,15 +1,9 @@
-cattura_APOD().catch(error=>{
-    console.log(error);
-});
-async function cattura_APOD(){
-const risposta_APOD =await fetch("/APOD",{
-    method: 'post',
-    body: 'application/json'
-});
-const text=await risposta_APOD.text();
-const APOD=JSON.parse(text);
-document.getElementById('loader').style.display="none";
-document.getElementById('descrizione').textContent=APOD.descrizione;
-document.getElementById('im').src=APOD.url;
-document.getElementById('APODT').textContent=APOD.title;
+function mostra_APOD(descrizione,titolo,url,isImage){
+    document.getElementById('descrizione').textContent=descrizione;
+    document.getElementById('APODT').textContent=titolo;
+    if(isImage==="false"){
+        document.getElementById('vid').src=url;
+    }else{  
+       document.getElementById('im').src=url; 
+    }   
 }

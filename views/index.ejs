@@ -4,6 +4,7 @@
         <link rel="shortcut icon" type="image/ico" href="img/favicon.ico">
         <link rel="stylesheet" type= text/css href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
         <link rel="stylesheet" type= text/css href="css/index.css">
+        <script src="js/nasa_api_fetch.js"></script>
         <title>IMPACT.com</title>
     </head>
     <!-- HEAD -->
@@ -14,7 +15,7 @@
                 <ul class="nav-area">
                     <li><a href="/">Home</a></li>
                     <li><a href="/NASA">NASA</a></li>
-                    <li><a href="pages/GPU.html">AstroWiki</a></li>
+                    <li><a href="pages/Astrowiki.html">AstroWiki</a></li>
                     <li><a href="pages/About.html">About</a></li>
                 </ul>
             </nav>
@@ -27,11 +28,14 @@
                         <text>where you can access live asteroids information</text>
                         <br><br>
                         <label>Inserisci lasso di tempo in cui cercare:</label><br>
-                        <form class="form" id="myform">
+                        <form class="form" id="myform" method="POST" action="/NEO">
                             <label>StartDate</label>
                             <input type="date" name="StartDate"></input>
                             <label>EndDate</label>
-                            <input type="date" name="EndDate"></input>
+                            <input type="date" name="EndDate"></input><br>
+                            <% if (errore){ %>
+                                <text style="color:red;"> le date inserite sono errate </text><br>
+                                <% } %>
                             <button class="btn-area">Search</button>
                         </form>
                     </div>
@@ -45,9 +49,16 @@
                     <a class="btn-area" href="/APOD">
                     GO
                     </a> 
+                    
+                    
                 </div>
         </section>
-        <script src="js/nasa_api_fetch.js"></script>
+        <% if(risposta && !errore){ %>
+            <script>
+                var risp=JSON.parse('<%-risposta%>');
+                stampa(risp);
+            </script>
+        <% } %>
         <footer>For info please contact us at : gianfelice.1851260@studenti.uniroma1.it  or  fosci.18XXXXX@studenti.uniroma1.it</footer>
     </body>
 </html>

@@ -2,3 +2,5 @@
 node_modules/
 #ignore environment variables
 .env
+#ignore secrets
+secrets.json
