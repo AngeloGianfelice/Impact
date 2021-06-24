@@ -15,18 +15,18 @@ REQUISITI
 5)La soluzione deve prevedere l'uso di protocolli asincroni. Per esempio Websocket e/o AMQP (o simili es MQTT);
 
 6)Il progetto deve essere su GIT (GITHUB, GITLAB ...) e documentato con un README che illustri almeno:
-    -scopo del progetto;
-    -architettura di riferimento e tecnologie usate (con un diagramma);
-    -chiare indicazioni sul soddisfacimento dei requisiti;
-    -istruzioni per l'installazione;
-    -istruzioni per il test;
+-scopo del progetto;
+-architettura di riferimento e tecnologie usate (con un diagramma);
+-chiare indicazioni sul soddisfacimento dei requisiti;
+-istruzioni per l'installazione;
+-istruzioni per il test;
 
 TECNOLOGIE UTILIZZATE
 
-REST 1: NASA Asteroids NeoWs (Near Earth Object Web Service);
-REST 2: NASA APOD  (Astronomy Picture of the Day);
-REST 3: GOOGLE Calendar (Oauth);
-PROTOCOLLI ASINCRONI : WebSocket;
+REST1:NASA Asteroids NeoWs (Near Earth Object Web Service);
+REST2:NASA APOD  (Astronomy Picture of the Day);
+REST3:GOOGLE Calendar (Oauth);
+PROTOCOLLI ASINCRONI:WebSocket;
 Progetto Documentato su GitHub (README).
 
 IDEE PROGETTO
@@ -34,14 +34,14 @@ IDEE PROGETTO
 Lo scopo del progetto è quello di fornire agli appassionati di astronomia uno spazio dove poter ricavare informazioni, dialogare con altri utenti e tenersi sempre aggiornato sull'attavità e sulle missioni spaziali della NASA. 
 
 In particolare, Impact offre, tramite l'utilizzo delle api rest fornite dalla NASA (https://api.nasa.gov/), la possibilità di visualizzare le informazioni relative ai cosidetti Near Earth Objects (NEOs). Nello specifico l'api NeoWs fornita dalla NASA ritorna all'utente (stampando a schermo nell'apposita area) varie informazioni relative ai corpi celesti(nel 99% dei casi asteroidi) passanti vicino alla terra quali: 
-    -nome;
-    -id;
-    -magnitudine;
-    -diametro minimo e massimo(in km);
-    -eventuale pericolosità;
-    -data di approccia alla Terra;
-    -velocita(in km/h);
-    -distanza(in km).
+-nome;
+-id;
+-magnitudine;
+-diametro minimo e massimo(in km);
+-eventuale pericolosità;
+-data di approccia alla Terra;
+-velocita(in km/h);
+-distanza(in km).
 Nella pagina AstroWiki vengono spiegate nel dettaglio le voci elencate sopra, mediante immagini, grafici e tabelle. esplicative.
 
 Inoltre Impact consente agli utenti di visualizzare la cosiddeta "APOD", ovvere l'immagine astronomica del giorno. Quest'ultima viene ritornata dall'api APOD fornita della Nasa, insieme ad un titolo, ed una breve descrizione della suddetta immagine ; in alcuni casi al posto dell'immagine si può trovare un brevissimo video.
@@ -58,12 +58,12 @@ ISTRUZIONI PER IL TEST
 
 Per testare il nostro progetto è sufficiente accedere al url localhost:8080 da un qualsiasi browser.
 L'utente si ritroverà  così nella HomePage di Impact da cui si può:
-    -compilare un form inserirendo un lasso di tempo (massimo 7 giorni) per accedere alle informazioni sugli asteroidi vicini alla terra in quello specifico lasso di tempo, le quali verranno stampate dopo qualche secondo nell'apposita area a destra del form;
-    -visualizzare l'immagine astronomica del giorno cliccando sul bottone in basso(al click l'utente verrà automaticamente redirezionato nell'apposita pagina);
-    Tramite la navigation bar in alto è possibile:
-        -accedere alla pagina NASATV cliccando il bottone "NASA",o il bottone "Login" in alto a destra(al click l'utente verra riderezionato alla pagina di autenticazione Oauth dove dovrà inserire le proprie credenziali Google);
-        -accedere alla pagina Astrowiki cliccando sull' omonimo  bottone;
-        -accedere alla pagina About cliccando sull' omonimo  bottone.
+-compilare un form inserirendo un lasso di tempo (massimo 7 giorni) per accedere alle informazioni sugli asteroidi vicini alla terra in quello specifico lasso di tempo, le quali verranno stampate dopo qualche secondo nell'apposita area a destra del form;
+-visualizzare l'immagine astronomica del giorno cliccando sul bottone in basso(al click l'utente verrà automaticamente redirezionato nell'apposita pagina);
+Tramite la navigation bar in alto è possibile:
+-accedere alla pagina NASATV cliccando il bottone "NASA",o il bottone "Login" in alto a destra(al click l'utente verra riderezionato alla pagina di autenticazione Oauth dove dovrà inserire le proprie credenziali Google);
+-accedere alla pagina Astrowiki cliccando sull' omonimo  bottone;
+-accedere alla pagina About cliccando sull' omonimo  bottone.
 Dalla pagina NasaTV si può invece:
 -visualizzare e scrivere messaggi su una chat room (a destra della pagina);
 -visualizzare i programmi in live trasmessi dalla NASA (a sinistra della pagina);
