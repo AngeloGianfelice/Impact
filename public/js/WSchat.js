@@ -21,7 +21,7 @@
           ws.onopen = () => {
             console.log('Connection opened!');
           }
-          ws.onmessage = ({ data }) => showMessage(data);
+          ws.onmessage = ({ data }) => showMessage("GUEST: "+data);
           ws.onclose = function() {
             ws = null;
           }
@@ -32,7 +32,7 @@
             showMessage("No WebSocket connection :(");
             return ;
           }
-    
+          
           ws.send(messageBox.value);
           showMessage("You: " + messageBox.value);
         }

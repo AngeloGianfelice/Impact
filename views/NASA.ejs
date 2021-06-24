@@ -18,7 +18,7 @@
                     <li><a href="pages/About.html">About</a></li>
                 </ul>
             </nav>
-            <a href="#" class="btn-area">login</a>
+            <a href="/" class="btn-area">BACK</a>
         </header>
         <section>
                 <div class="row">
@@ -31,6 +31,42 @@
                         <input type="text" id="messageBox" placeholder="Type your message here" style="display: block; width: 100%; margin-bottom: 10px; padding: 10px;"></input>
                         <button id="send" title="Send Message!" style="width: 100%; height: 30px;">Send Message</button>
                     </div>
+                </div>
+
+                <% if(logged){ %>
+                <div class="row" style="margin-top:20px">
+                    <div class="column left"><a class="btn-area" href='/NASATV?calendar=list'>mostra eventi attivi del tuo Google Calendar</a>
+                        <br><br>
+                        <%if(lista){ %>
+                            <div class="event-wrapper">
+                                <% for(elem in lista){%>
+                                <div class="evento">
+                                    <h3 id="titolo"><%= lista[elem].titolo %></h3>
+                                    <text id="data"><%= lista[elem].time %></text>
+                                    <p id="descrizione"><%= lista[elem].descrizione %></p>
+                                </div>
+                            <% } %>
+                            </div>
+                        <% } %>
+                    </div> 
+                    <div class="colum right">
+                        <form action="/NASATV" method="GET" class="myForm">
+                            <input type="hidden" name="calendar" value="event"></input>
+                            <h3>Ti Piace un programma delle NASA? Inserisci un evento sul tuo Google Calendar per non perdertelo!! </h3><br>
+                            <input name="summary" placeholder="inserisci titolo"style="margin:5px;"></input><br>
+                            <label style="margin:10px;">Inserisci data inizio evento</label><br>
+                            <input type="datetime-local" name="data_inizio" placeholder="inserisci data inizio"></input><br>
+                            <label style="margin:10px;">Inserisci data fine evento</label><br>
+                            <input type="datetime-local" name="data_fine"placeholder="inserisci data fine"></input><br>
+                            <input style="margin:20px;"name="descrizione" placeholder="inserisci descrizione"></input><br>
+                            <button style="margin:10px;" type="submit" class="btn-area">INSERISCI</button> 
+                        </form>
+                        <% if(added){ %>
+                            <text style="color:green;display:flex;justify-content:center;text-align: center;">evento inserito con successo ✔</text>
+                        <% } %>
+                    </div>
+                </div>
+                <% } %>
                 <script src="js/WSchat.js" type="text/javascript"></script>
         </section>
         
