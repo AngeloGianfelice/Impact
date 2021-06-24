@@ -21,7 +21,6 @@ Progetto per il corso 2020/21 di Reti di Calcolatori, tenuto dal prof. Andrea Vi
   -istruzioni per l'installazione;
   -istruzioni per il test;
 
-
 **TECNOLOGIE UTILIZZATE**
 
   - REST 1: NASA Asteroids NeoWs (Near Earth Object Web Service);
@@ -30,6 +29,7 @@ Progetto per il corso 2020/21 di Reti di Calcolatori, tenuto dal prof. Andrea Vi
   - PROTOCOLLI ASINCRONI : WebSocket;
   - Progetto Documentato su GitHub (README).
 
+![image](https://user-images.githubusercontent.com/83078138/123313966-4cdfa500-d52a-11eb-8902-ca8b648b7ef6.png)
 
 **IDEE PROGETTO**
 
@@ -74,7 +74,8 @@ Dalla pagina NasaTV si può invece:
 - visualizzare gli eventi futuri sul proprio Google Calendar , premendo l'apposito bottone in basso a sinistra; 
 - aggiungere un nuovo evento al proprio calendario, compilando il form in basso a destra.
 
-**CONTROLLI** 
+**CONTROLLI**
+
 La pagina NASATV non è accessibile in nessuno modo, se non previa l'autenticazione con il proprio account Google tramite Oauth. Per garantire ciò le route della pagina NASATV sono state protette e in caso di accessi senza autenticazione verrà stampato a schermo un messaggio di errore. 
 Nel form della Homepage non si può inserire un lasso di tempo superiore a 7 giorni come detto sopra; in caso di formato della data non corretto viene stampato a schermo un messaggio di errore.
 Nel form della Pagina NASATV, una volta inserito correttamente un nuovo evento viene stampato a schermo un messaggio di successo. 
